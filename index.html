@@ -22,7 +22,6 @@
       <section class="entrada-de-datos">
         <form action="">
           <textarea
-            name=""
             id="entradaDeDatos"
             cols="30"
             rows="25"
@@ -58,7 +57,6 @@
           </div>
 
           <textarea
-            name=""
             id="contenedorConResultado"
             class="mensaje-salida oculto"
             cols="30"
@@ -73,15 +71,15 @@
           >
         </div>
       </section>
+      <dialog id="modalErrorSinDatos" class="modal">
+        <p class="textoModal" id="textoModal">
+          Para poder encriptar/desencriptar debes agregar un texto. Por favor,
+          intenta de nuevo.
+        </p>
+        <button id="botonCerrarModal" class="boton-modal">Cerrar</button>
+      </dialog>
     </main>
-    <footer></footer>
-    <dialog id="modalErrorSinDatos" class="modal">
-      <p class="textoModal">
-        Para poder encriptar/desencriptar debes agregar un texto. Por favor,
-        intenta nuevamente.
-      </p>
-      <button id="botonCerrarModal" class="boton-modal">Cerrar</button>
-    </dialog>
+
     <script src="./script.js"></script>
   </body>
 </html>
