@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>
+          <img
+            src="img/Vector.png"
+            alt="logo de la pagina web"
+            class="logo-principal"
+          />
+        </h1>
+      </header>
+      <section class="entrada-de-datos">
+        <form action="">
+          <textarea
+            name=""
+            id="entradaDeDatos"
+            cols="30"
+            rows="25"
+            placeholder="Ingrese un texto o péguelo con click derecho aquí"
+          ></textarea>
+
+          <span class="mensaje-de-procesado">
+            <div class="tooltip">
+              <span class="tooltip-text">
+                Igualmente eliminamos acentos y convertimos a minúsculas el
+                texto</span
+              >
+              <img src="img/icono.png" alt="" />
+            </div>
+            Solo letras minúsculas y sin acentos</span
+          >
+          <button id="botonEncriptar">Encriptar</button>
+          <button id="botonDesencriptar">Desencriptar</button>
+        </form>
+      </section>
+      <section class="salida-de-datos" id="salidaDeDatos">
+        <div class="contenedor-resultado">
+          <div id="contenedorSinResultado">
+            <img
+              class="visual-esperando-datos"
+              src="./img/Muñeco.png"
+              alt="imagen que muestra a un joven examinando con una lupa"
+            />
+            <p class="mensaje-sin-datos">Ningún mensaje fue encontrado</p>
+            <p class="mensaje-acción-sin-datos">
+              Ingresa el texto que desees encriptar o desencriptar.
+            </p>
+          </div>
+
+          <textarea
+            name=""
+            id="contenedorConResultado"
+            class="mensaje-salida oculto"
+            cols="30"
+            rows="10"
+          ></textarea>
+
+          <button class="boton-copiar oculto" id="botonCopiar">
+            Copiar Texto
+          </button>
+          <span id="mensajeTextoCopiado" class="oculto"
+            >Texto copiado exitosamente</span
+          >
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <dialog id="modalErrorSinDatos" class="modal">
+      <p class="textoModal">
+        Para poder encriptar/desencriptar debes agregar un texto. Por favor,
+        intenta nuevamente.
+      </p>
+      <button id="botonCerrarModal" class="boton-modal">Cerrar</button>
+    </dialog>
+    <script src="./script.js"></script>
+  </body>
+</html>
